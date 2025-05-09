@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Transaction = require('../models/transaction'); // Transaction моделін импорттаңыз
+const Transaction = require('../models/Transaction'); // Transaction моделін импорттаңыз
 
 router.get('/', async (req, res) => {
   try {
