@@ -1,0 +1,118 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  .modal {
+    background: linear-gradient(135deg, #ffffff, #f3f3f3);
+    border-radius: 20px;
+    padding: 30px;
+    width: 480px;
+    max-width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.5s ease;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .modalTitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .detail {
+    font-size: 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #444;
+  }
+  
+  .detail span {
+    font-weight: 600;
+  }
+  
+  .enough {
+    color: #28a745;
+  }
+  
+  .insufficient {
+    color: #dc3545;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    gap: 12px;
+  }
+  
+  .payBtn,
+  .topUpBtn,
+  .cancelBtn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s;
+  }
+  
+  .payBtn {
+    background: #21c867;
+    color: #fff;
+  }
+  
+  .payBtn:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+  }
+  
+  .topUpBtn {
+    background: #1589dd;
+    color: #fff;
+  }
+  
+  .cancelBtn {
+    background: #c04436;
+    color: #fff;
+  }
+  
+  .payBtn:hover:not(:disabled),
+  .topUpBtn:hover,
+  .cancelBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      background: rgba(0, 0, 0, 0);
+    }
+    to {
+      background: rgba(0, 0, 0, 0.65);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

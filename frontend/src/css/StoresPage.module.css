@@ -1,0 +1,240 @@
+.storesContainer {
+    padding: 60px 40px;
+    background: var(--body-color);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .headerSection {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease forwards;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2a2a72;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #5a5a89;
+  }
+  
+  .filtersWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s ease;
+  }
+  
+  .searchBox {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .searchBox input {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+  }
+  
+  .searchBox input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(90, 90, 137, 0.4);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+  }
+  
+  .filterSelects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filterSelects select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+  }
+  
+  .filterSelects select:hover {
+    border-color: #2a2a72;
+  }
+  
+  .storeGrid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    animation: fadeInUp 1s ease;
+    justify-items: start; 
+  }
+  
+  .storeCard {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px; 
+  }
+  
+  .storeCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(42, 42, 114, 0.15);
+  }
+  
+  
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .storeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .storeCard:hover .storeImage {
+    transform: scale(1.05);
+  }
+  
+  .statusBadge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  
+  .active {
+    background-color: #28a745;
+  }
+  
+  .inactive {
+    background-color: #dc3545;
+  }
+  
+  .storeContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .storeName {
+    font-size: 1.5rem;
+    color: #2a2a72;
+    font-weight: 600;
+  }
+  
+  .storeRegion {
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .storeDescription {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .storeFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+  }
+  
+  .rating {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .visitBtn {
+    background-color: #2a2a72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .visitBtn:hover {
+    background-color: #1a1a59;
+    transform: translateY(-2px);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,117 @@
+/* Main Container */
+.container {
+  padding: 2rem;
+  background: linear-gradient(145deg, #8e8c8c, #cabcbc);
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  color: #fff;
+}
+
+/* Heading Style */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff7c7c;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Analysis Box */
+.analysisBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.metric {
+  background: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.metric:hover {
+  background: #ff7c7c;
+  transform: translateY(-5px);
+}
+
+.metric span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.table th, .table td {
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #444;
+}
+
+.table tbody tr {
+  background-color: #222;
+  transition: all 0.3s ease-in-out;
+}
+
+.table tbody tr:hover {
+  background-color: #444;
+  transform: translateY(-5px);
+}
+
+.table .income {
+  color: #4caf50;
+}
+
+.table .expense {
+  color: #f44336;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chartContainer {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

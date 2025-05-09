@@ -1,0 +1,141 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: #1e1e2f;
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    position: relative;
+    animation: fadeIn 0.4s ease;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .modalContent h3 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffd700;
+  }
+  
+  .modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modalInput, .modalSelect {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    background: #2e2e40;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.2s ease;
+  }
+  
+  .modalInput:focus, .modalSelect:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffd700;
+    background-color: #383850;
+  }
+  
+  .modalSelect {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+  }
+  
+  .modalButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .modalButtons button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .modalButtons button[type="submit"] {
+    background-color: #ffd700;
+    color: #1e1e2f;
+  }
+  
+  .modalButtons button[type="submit"]:hover {
+    background-color: #ffcc00;
+  }
+  
+  .modalButtons button[type="button"] {
+    background-color: #44445a;
+    color: #fff;
+  }
+  
+  .modalButtons button[type="button"]:hover {
+    background-color: #5c5c7a;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    } to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .cardPreview {
+    background: linear-gradient(135deg, #2d2d50, #1e1e2f);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(to bottom right, #ccc, #999);
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .previewNumber {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  
+  .previewBottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  

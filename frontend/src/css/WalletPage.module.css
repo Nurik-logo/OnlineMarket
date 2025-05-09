@@ -1,0 +1,155 @@
+.walletContainer {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .balanceCard {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+  }
+  
+  .balanceLabel {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
+  .balanceValue {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .cardsSection {
+    background: #f7f9fb;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cardsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cardsTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .addCardBtn {
+    background-color: #4e54c8;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .addCardBtn:hover {
+    background-color: #3b3fa6;
+  }
+  
+  .cardList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    flex: 1 1 280px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cardIcon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+  
+  .visaIcon {
+    color: #1a1f71;
+  }
+  
+  .mastercardIcon {
+    color: #eb001b;
+  }
+  
+  .cardDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardNumber {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  
+  .cardExpiry, .cardType {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .noCards {
+    font-style: italic;
+    color: #777;
+  }
+  .balanceCurrency {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+
+  .balanceAction {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .balanceButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #204aa4, #6b5be3);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .balanceButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+  }
+  
