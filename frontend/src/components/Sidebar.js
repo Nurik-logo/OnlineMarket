@@ -68,17 +68,18 @@ const Sidebar = ({ Component }) => {
 
             <ul className="menu-links">
               <li className="nav-link">
-                {user.role === "admin" ? (
+                {/* {user.role === "admin" ? (
                   <Link to="/stores/acces">
                   <i className='bx bx-store icon'></i>
                   <span className="text nav-text">Дүкендерге рұқсат</span>
                 </Link>
                 ):(
-                  <Link to="/stores">
+                  
+                )} */}
+                <Link to="/stores">
                   <i className='bx bx-store icon'></i>
                   <span className="text nav-text">Stores </span>
                 </Link>
-                )}
               </li>
 
               <li className="nav-link">
@@ -89,21 +90,21 @@ const Sidebar = ({ Component }) => {
               </li>
 
               <li className="nav-link">
-                <Link to="/users">
+                <Link to="#">
                   <i className='bx bx-user icon'></i>
                   <span className="text nav-text">Users</span>
                 </Link>
               </li>
 
               <li className="nav-link">
-                <Link to="/create-post">
+                <Link to="#">
                   <i className='bx bx-edit icon'></i>
                   <span className="text nav-text">Create Post</span>
                 </Link>
               </li>
 
               <li className="nav-link">
-                <Link to="/create-category">
+                <Link to="#">
                   <i className='bx bx-category icon'></i>
                   <span className="text nav-text">Create Category</span>
                 </Link>
