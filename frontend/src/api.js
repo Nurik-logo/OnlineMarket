@@ -228,3 +228,18 @@ export const getAllTransactions = async () => {
     throw error;
   }
 };
+
+export const createTransaction = async (formData) => {
+  try {
+    const response = await axios.post(`${API_URL}/balance-requests`, formData, {
+      headers: {
+        ...authHeader(),
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error creating transaction:', error.response ? error.response.data : error.message);
+    throw error;
+  }
+};

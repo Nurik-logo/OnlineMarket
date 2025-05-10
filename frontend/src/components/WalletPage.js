@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from '../css/WalletPage.module.css';
 import { AuthContext } from '../context/AuthContext';
-import { getBalance, getCreditCardsByUser } from '../api';
+import { getBalance, getCreditCardsByUser, createTransaction  } from '../api';
 import { FaCcVisa, FaCcMastercard } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import AddCardModal from '../components/AddCardModal'; 
@@ -27,11 +27,16 @@ const WalletPage = () => {
     }
   };
 
-  const handleBalanceRequest = (requestData) => {
-    console.log('Balance Request Submitted:', requestData);
-    toast.success('Сұраныс сәтті жіберілді!');
-    // Мұнда backend API-ге сұраныс жіберуге болады
+  const handleBalanceRequest = async (requestData) => {
+    try {
+      await createTransaction(requestData);
+      toast.success('Сұраныс сәтті жіберілді!');
+    } catch (error) {
+      toast.error('Сұранысты жіберу кезінде қате болды.');
+      console.error('Transaction error:', error);
+    }
   };
+  
   
 
   useEffect(() => {
@@ -71,7 +76,7 @@ const WalletPage = () => {
     <div className={styles.walletContainer}>
       <h2 className={styles.title}>💳 Your Wallet</h2>
       <div className={styles.balanceCard}>
-        <p className={styles.balanceLabel}><b>Balance5</b></p>
+        <p className={styles.balanceLabel}><b>Balance</b></p>
         <div className={styles.balanceCurrency}>
           <b><p>₸ {convertBalance('KZT')}</p></b>
           <b><p>₽ {convertBalance('RUB')}</p></b>
