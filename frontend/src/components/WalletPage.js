@@ -71,7 +71,7 @@ const WalletPage = () => {
     <div className={styles.walletContainer}>
       <h2 className={styles.title}>💳 Your Wallet</h2>
       <div className={styles.balanceCard}>
-        <p className={styles.balanceLabel}><b>Balance</b></p>
+        <p className={styles.balanceLabel}><b>Balance5</b></p>
         <div className={styles.balanceCurrency}>
           <b><p>₸ {convertBalance('KZT')}</p></b>
           <b><p>₽ {convertBalance('RUB')}</p></b>
