@@ -1,12 +1,20 @@
-require('dotenv').config();
 const { Pool } = require('pg');
+require('dotenv').config();
 
 const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  }
 });
+
+pool.connect()
+  .then(() => {
+    console.log('PostgreSQL дерекқорына Render-де қосылу сәтті!');
+  })
+  .catch(err => {
+    console.error('Қосылу қатесі', err.stack);
+  });
+
 
 module.exports = pool;
