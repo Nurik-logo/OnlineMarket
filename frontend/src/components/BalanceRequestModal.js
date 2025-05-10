@@ -56,7 +56,7 @@ const BalanceRequestModal = ({ onClose, onSubmit }) => {
                 accept="image/*, application/pdf"
                 onChange={(e) => setReceipt(e.target.files[0])}
               />
-              <small>Каспи номер: <b>+7 771 364 21 63</b></small>
+              <small>Каспи номер: <b>+7 771 364 21 63  <b>Нұрлыбек И.</b></b></small>
             </div>
           )}
   
