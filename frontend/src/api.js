@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000';
+const API_URL = 'https://onlinemarket-dr9a.onrender.com';
 
 export const authHeader = () => {
     const token = JSON.parse(localStorage.getItem('token'));
